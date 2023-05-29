@@ -58,7 +58,6 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/infraa:latest
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
