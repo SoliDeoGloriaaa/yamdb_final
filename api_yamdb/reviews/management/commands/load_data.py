@@ -7,7 +7,6 @@ from api_yamdb.reviews.models import (
     User, Category, Genre, Title, Review, Comment, GenreTitle
 )
 
-
 TABLES = (
     (User, 'static/data/users.csv'),
     (Category, 'static/data/category.csv'),
@@ -20,7 +19,6 @@ TABLES = (
 
 
 class Command(BaseCommand):
-
     def handle(self, *args, **kwargs):
         try:
             for model, base in TABLES:
