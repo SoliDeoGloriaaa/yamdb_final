@@ -6,9 +6,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', default='secret_key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEGUB', default='debug')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS'.split(' '), default='allowed_hosts')
 
 
 # Application definition
@@ -132,4 +132,4 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
 }
 
-EMAIL_ADMIN = 'from@yamdb.com'
+EMAIL_ADMIN = os.getenv('EMAIL_ADMIN', default='email_admin')
