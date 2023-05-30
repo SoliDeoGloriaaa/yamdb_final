@@ -5,9 +5,15 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', default='secret_key')
 
-DEBUG = os.environ.get('DEBUG', default='debug')
+DEBUG = os.getenv('DEBUG', default='debug')
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='allowed_hosts')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(' ')
+
+# ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS', default='allowed_hosts')]
+
+# DEBUG = os.environ.get('DEBUG')
+
+# ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(', ')
 
 
 # Application definition
