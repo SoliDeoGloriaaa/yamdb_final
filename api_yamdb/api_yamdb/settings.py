@@ -5,7 +5,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', default='secret_key')
 
-DEBUG = os.getenv('DEBUG', default='debug')
+DEBUG = os.environ.get('DEBUG', default='debug')
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='allowed_hosts')
 
