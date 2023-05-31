@@ -11,7 +11,7 @@ services:
     # build:
     #   context: ../api_yamdb
     #   dockerfile: api_yamdb/Dockerfile
-    image: bonjourgod/infraa
+    image: bonjourgod/infraa:latest
     restart: always
     volumes:
       - static_value:/app/static/
