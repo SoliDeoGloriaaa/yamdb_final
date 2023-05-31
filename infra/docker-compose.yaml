@@ -10,7 +10,7 @@ services:
   web:
     build:
       context: ../api_yamdb
-      dockerfile: Dockerfile
+      dockerfile: api_yamdb/Dockerfile
     image: bonjourgod/infraa:latest
     restart: always
     volumes:
