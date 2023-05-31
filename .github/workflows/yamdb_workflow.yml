@@ -48,7 +48,7 @@ jobs:
             context: ./api_yamdb
             file: ./api_yamdb/Dockerfile
             push: true
-            tags: ${{ secrets.DOCKER_USERNAME }}/infraa
+            tags: ${{ secrets.DOCKER_USERNAME }}/infraa:latest
 
   deploy:
       runs-on: ubuntu-latest
@@ -61,7 +61,7 @@ jobs:
           username: ${{ secrets.USER }} 
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo docker pull bonjourgod/infraa
+            sudo docker pull bonjourgod/infraa:latest
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
