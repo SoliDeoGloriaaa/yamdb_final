@@ -7,8 +7,9 @@ services:
       - /var/lib/postgresql/data/ 
     env_file:
       - ./.env 
-  web:
-    dockerfile: api_yamdb/Dockerfile
+  web: 
+    build:
+      dockerfile: api_yamdb/Dockerfile
     image: bonjourgod/infraa:v.1
     restart: always 
     volumes: 
