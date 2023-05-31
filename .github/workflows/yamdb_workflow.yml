@@ -48,7 +48,7 @@ jobs:
             context: ./api_yamdb
             file: ./api_yamdb/Dockerfile
             push: true
-            tags: ${{ secrets.DOCKER_USERNAME }}/infraa:latest
+            tags: ${{ secrets.DOCKER_USERNAME }}/infraa
 
   deploy:
       runs-on: ubuntu-latest

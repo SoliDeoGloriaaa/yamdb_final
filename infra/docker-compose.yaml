@@ -8,10 +8,10 @@ services:
     env_file:
       - ./.env
   web:
-    build:
-      context: ../api_yamdb
-      dockerfile: api_yamdb/Dockerfile
-    image: bonjourgod/infraa:latest
+    # build:
+    #   context: ../api_yamdb
+    #   dockerfile: api_yamdb/Dockerfile
+    image: bonjourgod/infraa
     restart: always
     volumes:
       - static_value:/app/static/
