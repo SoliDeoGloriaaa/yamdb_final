@@ -8,8 +8,9 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='secret_key')
 
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split()
 
+# gngn
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
