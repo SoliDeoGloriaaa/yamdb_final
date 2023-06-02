@@ -10,7 +10,7 @@ DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
 
-#gngn
+# gngn
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
