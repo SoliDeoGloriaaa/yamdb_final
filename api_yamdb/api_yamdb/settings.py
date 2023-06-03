@@ -8,7 +8,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='secret_key')
 
 DEBUG = os.getenv('DEBUG', default=True)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(' ')
 
 # install
 INSTALLED_APPS = [
